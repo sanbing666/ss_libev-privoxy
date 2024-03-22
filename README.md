@@ -1,3 +1,5 @@
+docker images：docker pull sanbing666/ss_libev-privoxy:latest
+
 ### docker-compose.yml配置
 服务端
 ```shell
