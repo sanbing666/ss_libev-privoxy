@@ -62,7 +62,7 @@ services:
 ```shell
 {
     "server":"0.0.0.0",
-    "server_port":2096,
+    "server_port":9000,
     "password":"password",
     "timeout":300,
     "user":"nobody",
