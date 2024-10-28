@@ -1,6 +1,6 @@
 docker images：docker pull sanbing666/ss_libev-privoxy:latest
 
-### docker-compose.yml配置
+# docker-compose.yml配置
 服务端
 ```shell
 version: '3'
@@ -57,8 +57,8 @@ services:
     restart: unless-stopped
 ```
 
-### config.json配置文件
-服务端
+# 服务端config.json配置文件
+默认
 ```shell
 {
     "server":"0.0.0.0",
@@ -72,8 +72,39 @@ services:
     "mode":"tcp_and_udp"
 }
 ```
-
-本地端
+带有v2ray-plugin
+```shell
+{
+    "server":"0.0.0.0",
+    "server_port":9000,
+    "password":"password0",
+    "timeout":300,
+    "user":"nobody",
+    "method":"aes-256-gcm",
+    "fast_open":true,
+    "nameserver":"8.8.8.8",
+    "mode":"tcp_and_udp",
+    "plugin":"v2ray-plugin",
+    "plugin_opts":"server"
+}
+```
+带有xray-plugin
+```shell
+{
+    "server":"0.0.0.0",
+    "server_port":9000,
+    "password":"password0",
+    "timeout":300,
+    "user":"nobody",
+    "method":"aes-256-gcm",
+    "fast_open":true,
+    "nameserver":"8.8.8.8",
+    "mode":"tcp_and_udp",
+    "plugin":"xray-plugin",
+    "plugin_opts":"server"
+}
+```
+# 本地端config.json配置文件
 ```shell
 {
     "server":"server",
